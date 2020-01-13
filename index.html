@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>Applications</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+    <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/calc.css">
+    <link rel="stylesheet" type="text/css" href="/library/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/tdl.css">
+  </head>
+
+  <body>
+    <div class="welcome">
+    <h2>ADUBI O.S. WEB APPLICATIONS</h2>
+    <p class="icons"><i class="fa fa-calculator fa-4x"></i><i class="fa fa-tasks fa-4x"></i></p>
+    <p class="msg" id="msg">Kindly login to use the Calculator and ToDo-List App!</p>
+    <button id="btn-login" disabled="true" class="btn btn-primary" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" class="btn btn-danger hidden" onclick="logout()">Log out</button>
+    </div>
+
+    <!-- <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently
+        <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token:
+        <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile:
+        <pre id="ipt-user-profile"></pre>
+      </label>
+    </div> -->
+
+    <div class="hidden" id="gated-content">
+        <div class="row">
+          <div class="col">
+        <!-- calculator -->
+        <div class="calculator">
+            <div id="heading">
+                    <p>Simple Scientific Calcuator
+                  </div>
+
+        <input type="text" class="calculator-screen" value="" disabled />
+        
+        <div class="calculator-keys">
+          
+        <button type="button" class="all-clear" value="all-clear">AC</button>
+        <button type="button" class="sin operator" value="sin" onclick="sin(this.calculator)">sin</button>
+        <button type="button" class="cos operator" value="cos" onclick="cos(this.calculator)">cos</button>
+        <button type="button" class="tan operator" value="tan" onclick="tan(this.calculator)">tan</button>
+        <button type="button" class="sqrt operator" value="sqrt" onclick="sqrt(this.calculator)">&radic;</button>
+
+
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
+        <button type="button" class="operator" value="+">+</button>
+        <button type="button" class="square operator" value="square" onclick="square(this.calculator)">x<sup>2</sup></button>
+
+
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
+        <button type="button" class="operator" value="-">-</button>
+        <button type="button" value="1">1</button>
+
+        
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+        <button type="button" class="operator" value="*">&times;</button>
+        <button type="button" class="percent operator" value="%" onclick="percent(this.calculator)">%</button>
+        
+        
+        <button type="button" value="0">0</button>
+        <button type="button" class="decimal" value=".">.</button>
+        <button type="button" class="operator" value="/">&divide;</button>
+        <button type="button" class="equal-sign operator" value="=">=</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="col">
+      <!-- ToDo List -->
+      <div class="container">
+          <div class="header">
+              <h2 style="margin: 5px; color: white; text-align: center; padding-top: 30px;">Todos</h2>
+              <p style="color: white; text-align: center;">What are your plans today?</p>
+              <div class="clear">
+                  <i class="fa fa-refresh"></i>
+              </div>
+              <div id="date"></div>
+          </div>
+          <div class="add-to-do">
+                  <i class="fa fa-plus-circle" onclick="newItem()"></i>
+                  <input type="text" id="input" placeholder="Add an item...">
+              </div>
+          <div class="content">
+              <ul id="list">
+                 
+                  <!-- <li class="item">
+                      <i class="fa fa-circle-thin co" job="complete" id="0"></i>
+                      <p class="text">Read on View and Riot JS</p>
+                      <i class="fa fa-trash-o de" job="delete" id="0"></i> 
+                  </li> -->
+              </ul>
+          </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.2/auth0-spa-js.production.js"></script>
+    <script src="library/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/tdl.js"></script>
+  </body>
+</html>
